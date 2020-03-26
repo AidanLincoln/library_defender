@@ -14,12 +14,19 @@ newLibrary = Library.create(health: 1000)
 newGame.library = newLibrary
 
 levelOne = Level.create(level_number: 1)
+levelTwo = Level.create(level_number: 2)
+levelThree = Level.create(level_number: 3)
 newGame.levels << levelOne
+newGame.levels << levelTwo
+newGame.levels << levelThree
 
-newMonster = LoudChild.create(health: 50, attack_damage: 30, img: "wafa")
+newMonster = LoudChild.create(monster_name: "Loud Child", health: 50, attack_damage: 30, img: "wafa")
 levelOne.monsters << newMonster
 
-newDefender = JuniorLibrarian.create(attack_damage: 30, cost: 50)
+newMonkey = Monkey.create(monster_name: "Monkey", health: 4, attack_damage: 5)
+levelOne.monsters << newMonkey
+
+newDefender = JuniorLibrarian.create(defender_name: "Junior Librarian", attack_damage: 30, cost: 50)
 levelOne.defenders << newDefender
 
 zeb = User.create(name: "Zeb")
